@@ -1,0 +1,24 @@
+1.在/etc/rc.d/init.d/下面添加文件logmonitor文件，
+
+3. 给脚本赋可执行权限
+
+cd /etc/rc.d/init.d/
+chmod +x logmonitor
+4. 添加脚本到开机自动启动项目中
+
+chkconfig --add logmonitor
+chkconfig logmonitor on
+
+
+————————————————————
+安装oral客户端时，配置/etc/profile
+
+
+license   app.js   152901
+
+
+zzb:  部署地址：node1.xdata:	/xdata/logmonitor/logBin/logMonitor
+cd /xdata/logmonitor/logBin/logMonitor  && nohup python bin/run.py >> logs/console.log 2>&1 &
+
+华青：部署地址：node1.xdata:	/xdata_pkg/logMonitor/
+cd /xdata_pkg/logMonitor/  && nohup python bin/run.py >> logs/console.log 2>&1 &

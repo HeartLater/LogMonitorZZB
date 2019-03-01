@@ -1,0 +1,5 @@
+#!/bin/bash
+#chkconfig: 2345 80 90
+export ORACLE_HOME=/usr/lib/oracle/12.1/client64/
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/usr/lib:/usr/local/lib
+cd /xdata_pkg/logMonitor/  && nohup python bin/run.py >> logs/console.log 2>&1 &
