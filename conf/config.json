@@ -1,0 +1,10 @@
+{
+    "log_file": "/var/log/ambari-server/ambari-audit.log",
+    "orcl": {
+        "host": "192.168.20.212",
+        "servername": "ORCL",
+        "database": "TRSWCM",
+        "username": "trswcm",
+        "password": "trswcmv7"
+    }
+}

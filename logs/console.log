@@ -1,0 +1,50 @@
+2019-01-29 16:07:00 Info: [start tail file: '/var/log/ambari-server/ambari-audit.log']
+Traceback (most recent call last):
+  File "bin/run.py", line 35, in <module>
+    main()
+  File "bin/run.py", line 31, in main
+    tails(config['log_file'], callback)
+  File "/xdata_pkg/logMonitor/bin/tail.py", line 78, in tails
+    start_read = t.follow()
+  File "/xdata_pkg/logMonitor/bin/tail.py", line 49, in follow
+    self.read_callback(readed)
+  File "/xdata_pkg/logMonitor/bin/audit.py", line 39, in _callback
+    find_callback(content)
+  File "/xdata_pkg/logMonitor/bin/audit.py", line 63, in handler
+    dboption.insert(po, handler.orcl)
+  File "/xdata_pkg/logMonitor/bin/dboption.py", line 24, in insert
+    orcl['username'], orcl['password'], '%s/%s' % (orcl['host'], orcl['servername']))
+cx_Oracle.DatabaseError: DPI-1047: 64-bit Oracle Client library cannot be loaded: "libclntsh.so: cannot open shared object file: No such file or directory". See https://oracle.github.io/odpi/doc/installation.html#linux for help
+nohup: 忽略输入
+2019-01-29 16:15:46 Info: [start tail file: '/var/log/ambari-server/ambari-audit.log']
+Traceback (most recent call last):
+  File "bin/run.py", line 35, in <module>
+    main()
+  File "bin/run.py", line 31, in main
+    tails(config['log_file'], callback)
+  File "/xdata_pkg/logMonitor/bin/tail.py", line 78, in tails
+    start_read = t.follow()
+  File "/xdata_pkg/logMonitor/bin/tail.py", line 49, in follow
+    self.read_callback(readed)
+  File "/xdata_pkg/logMonitor/bin/audit.py", line 39, in _callback
+    find_callback(content)
+  File "/xdata_pkg/logMonitor/bin/audit.py", line 63, in handler
+    dboption.insert(po, handler.orcl)
+  File "/xdata_pkg/logMonitor/bin/dboption.py", line 32, in insert
+    orcl['database'], id, po['User'], 3, 0, po['datetime'], po['RemoteIp'], po['Operation'])
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe9 in position 0: ordinal not in range(128)
+2019-01-29 17:05:54 Info: [start tail file: '/var/log/ambari-server/ambari-audit.log']
+Traceback (most recent call last):
+  File "bin/run.py", line 35, in <module>
+    main()
+  File "bin/run.py", line 31, in main
+    tails(config['log_file'], callback)
+  File "/xdata_pkg/logMonitor/bin/tail.py", line 78, in tails
+    start_read = t.follow()
+  File "/xdata_pkg/logMonitor/bin/tail.py", line 49, in follow
+    self.read_callback(readed)
+  File "/xdata_pkg/logMonitor/bin/audit.py", line 39, in _callback
+    find_callback(content)
+  File "/xdata_pkg/logMonitor/bin/audit.py", line 62, in handler
+    if po['User'] and 'null' != po['User'] and po['RemoteIp'] and 'null' != po['RemoteIp'] and po['Operation'] and 'null' != po['Operation']:
+KeyError: 'Operation'
